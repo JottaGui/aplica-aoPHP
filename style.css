@@ -1,0 +1,38 @@
+body{
+color: aqua;
+background-color: black;
+}
+
+#centro{
+text-align: center;
+justify-content:center ;
+}
+
+
+#cadastro{
+justify-content: center;
+align-items: center;
+border-radius: 8% ;
+height: 70%;
+width: 30%;
+background-color: rgba(255, 156, 28, 0.836);
+margin-top: 6%;
+
+}
+
+
+#vendas{
+text-align: center ;
+
+}
+
+#quadro{
+    justify-content: center;
+    align-items: center;
+    border-radius: 8% ;
+    height: 70%;
+    width: 30%;
+    background-color: rgba(255, 156, 28, 0.836);
+    margin-top: 6%;
+
+}
