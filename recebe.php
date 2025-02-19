@@ -1,21 +1,19 @@
 <?php
- $nome = $_POST['nm'];
- $valor = $_POST['vl'];
- $quantidade = $_POST['qt'];
- $valor = (float)$valor; 
- $quantidade = (int)$quantidade;   
- $valortotal = $valor * $quantidade;
- $comissao = 0.03 * $valortotal;
-
-if($valortotal> 500){ $comissao = 0.10 * $valortotal;
-
-}
-
+// $nome = $_POST['nm'];
+ $valortotal = $_POST['vl'];
+ $diasdetrabalho = $_POST['dias'];
+ $diasquentrabalhou = $_POST['ndias'];
+ $valortotal = (float)$valortotal; 
+ $diasdetrabalho = (int)$diasdetrabalho; 
+ $diasquentrabalhou = (int)$diasquentrabalhou;
+ $comissaocru = 0.012 * $valortotal;
+ $comissao =  ($comissaocru / $diasdetrabalho) * $diasquentrabalhou + $comissaocru;
+$comissao = (int)$comissao;
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,16 +21,12 @@ if($valortotal> 500){ $comissao = 0.10 * $valortotal;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body2">
     
-<section >
-    <div class="container-fluid mt-auto" id="quadro">
-    <h1>resultado valores</h1>
-    <h4><?PHP echo ("nome: ".$nome);?></h4>
-    <h4><?PHP echo ("valor: ".$valor);?></h4>
-    <h4><?PHP echo ("quantidade: ".$quantidade);?></h4>
-    <h4><?PHP echo ("valor total: ".$valortotal);?></h4>
-    <h4><?PHP echo ("comissao: ".$comissao);?></h4>
+<section  class="container-fluid mt-5" id="quadro">
+    <div class="container">
+    <h1>Seu salario é:</h1>
+    <h4><?PHP echo ($comissao);?></h4>
     </div>
 </section>
 
