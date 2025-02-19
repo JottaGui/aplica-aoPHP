@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,17 @@
 
 
 <body>
-    <div class="container-fluid mt-auto" id="centro">
+    <div class="container-fluid " id="centro">
 <form action="recebe.php" method="post">
         <div class="container-fluid" id="cadastro">
-        <h1 class="container-fluid" id="vendas">cadastro vendas</h1>
+        <h1 class="container-fluid" id="vendas">Ola Sr Jurandir!!!</h1>
         <div class="form-label mb-3">
-            <label for="floatingInput">produto</label>
-            <input type="text" name="nm"class="form-control" id="floatingInput">
-
-            <label for="floatingPassword">valor</label>
+            <label for="floatingPassword">Quanto o senhor vendeu?</label>
             <input type="number" name="vl" class="form-control" id="floatingPassword" >
-            <label for="floatingPassword ">quantidade</label>
-            <input type="number" name="qt"class="form-control mb-3" id="floatingPassword" >
+            <label for="floatingPassword ">Quantos dias voce trabalhadou?</label>
+            <input type="number" name="dias"class="form-control " id="floatingPassword" >
+            <label for="floatingPassword ">Quantos dias ficou em casa?</label>
+            <input type="number" name="ndias"class="form-control mb-3" id="floatingPassword" >
             <input class="btn btn-primary mb-3" type="submit" value="enviar">
             <input class="btn btn-primary mb-3  " type="reset" value="limpar">
         
